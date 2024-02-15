@@ -9,15 +9,14 @@ class ProfileCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
-          onPressed: () {
-            Uri.parse('tel:+201224774051');
-          },
-          icon: const Icon(
-            Icons.phone_outlined,
-            color: Colors.amber,
-            size: 50,
-          ),
-        ),
+            onPressed: () {
+              Uri.parse('tel:+201224774051');
+            },
+            icon: const ImageIcon(
+              AssetImage('assets/icons/whatsapp.png'),
+              size: 50,
+              color: Colors.amber,
+            )),
         const SizedBox(
           width: 20,
         ),
@@ -35,28 +34,26 @@ class ProfileCard extends StatelessWidget {
           width: 20,
         ),
         IconButton(
-          onPressed: () {
-            Uri.parse('https://github.com/MosasaUnited');
-          },
-          icon: const Icon(
-            Icons.car_crash_outlined,
-            color: Colors.amber,
-            size: 50,
-          ),
-        ),
+            onPressed: () {
+              Uri.parse('https://github.com/MosasaUnited');
+            },
+            icon: const ImageIcon(
+              AssetImage('assets/icons/github.png'),
+              size: 50,
+              color: Colors.amber,
+            )),
         const SizedBox(
           width: 20,
         ),
         IconButton(
-          onPressed: () {
-            Uri.parse('https://linkedin.com/in/mostafa-saad-247b5914b');
-          },
-          icon: const Icon(
-            Icons.car_crash_outlined,
-            color: Colors.amber,
-            size: 50,
-          ),
-        ),
+            onPressed: () {
+              Uri.parse('https://linkedin.com/in/mostafa-saad-247b5914b');
+            },
+            icon: const ImageIcon(
+              AssetImage('assets/icons/linkedin.png'),
+              size: 50,
+              color: Colors.amber,
+            )),
       ],
     );
   }
