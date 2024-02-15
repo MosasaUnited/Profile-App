@@ -40,6 +40,8 @@ dependencies:
   flutter_animate: ^4.5.0
   google_fonts: ^6.1.0
   lottie: ^3.0.0
+  #this package is for App Icon
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +69,12 @@ flutter:
   assets:
       - assets/images/
       - assets/lottie/
+  #App Icon
+  flutter_icons:
+    android: "launcher_icons"
+    ios: true
+    image_path: "assets/icons/app_icon.png"
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -79,6 +87,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+      - family: Icon ly-Broken
+        fonts:
+          - asset: fonts/icons.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:
