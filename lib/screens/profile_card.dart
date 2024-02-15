@@ -14,7 +14,7 @@ class ProfileCard extends StatelessWidget {
             },
             icon: const ImageIcon(
               AssetImage('assets/icons/whatsapp.png'),
-              size: 50,
+              size: 200,
               color: Colors.amber,
             )),
         const SizedBox(
@@ -24,8 +24,8 @@ class ProfileCard extends StatelessWidget {
           onPressed: () {
             Uri.parse('mailto:mostafa447@hotmail.com');
           },
-          icon: const Icon(
-            Icons.email_outlined,
+          icon: const ImageIcon(
+            AssetImage('assets/icons/email.png'),
             color: Colors.amber,
             size: 50,
           ),

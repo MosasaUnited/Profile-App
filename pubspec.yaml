@@ -69,11 +69,13 @@ flutter:
   assets:
       - assets/images/
       - assets/lottie/
-  #App Icon
-  flutter_icons:
-    android: "launcher_icons"
-    ios: true
-    image_path: "assets/icons/app_icon.png"
+      - assets/icons/
+      - assets/fonts/
+#App Icon
+flutter_icons:
+  android: "launcher_icons"
+  ios: true
+  image_path: "assets/icons/app_icon.png"
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
