@@ -1,60 +1,98 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+final Uri email = Uri.parse('mailto:mostafa447@hotmail.com');
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
+
+  static const _profileLinks = [
+    _ProfileLink(
+      url: 'tel:+201224774051',
+      iconAssetPath: 'assets/icons/whatsapp.png',
+      label: 'WhatsApp',
+    ),
+    _ProfileLink(
+      url: 'mailto:mostafa447@hotmail.com',
+      iconAssetPath: 'assets/icons/email.png',
+      label: 'Email',
+    ),
+    _ProfileLink(
+      url: 'https://github.com/MosasaUnited',
+      iconAssetPath: 'assets/icons/github.png',
+      label: 'GitHub',
+    ),
+    _ProfileLink(
+      url: 'https://linkedin.com/in/mostafa-saad-247b5914b',
+      iconAssetPath: 'assets/icons/linkedin.png',
+      label: 'LinkedIn',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        IconButton(
-            onPressed: () {
-              Uri.parse('tel:+201224774051');
-            },
-            icon: const ImageIcon(
-              AssetImage('assets/icons/whatsapp.png'),
-              size: 200,
-              color: Colors.amber,
-            )),
-        const SizedBox(
-          width: 20,
-        ),
-        IconButton(
-          onPressed: () {
-            Uri.parse('mailto:mostafa447@hotmail.com');
-          },
-          icon: const ImageIcon(
-            AssetImage('assets/icons/email.png'),
-            color: Colors.amber,
-            size: 50,
+        for (final link in _profileLinks)
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: _ProfileIconButton(link: link),
           ),
-        ),
-        const SizedBox(
-          width: 20,
-        ),
-        IconButton(
-            onPressed: () {
-              Uri.parse('https://github.com/MosasaUnited');
-            },
-            icon: const ImageIcon(
-              AssetImage('assets/icons/github.png'),
-              size: 50,
-              color: Colors.amber,
-            )),
-        const SizedBox(
-          width: 20,
-        ),
-        IconButton(
-            onPressed: () {
-              Uri.parse('https://linkedin.com/in/mostafa-saad-247b5914b');
-            },
-            icon: const ImageIcon(
-              AssetImage('assets/icons/linkedin.png'),
-              size: 50,
-              color: Colors.amber,
-            )),
       ],
+    );
+  }
+}
+
+class _ProfileLink {
+  final String url;
+  final String iconAssetPath;
+  final String label;
+
+  const _ProfileLink({
+    required this.url,
+    required this.iconAssetPath,
+    required this.label,
+  });
+}
+
+class _ProfileIconButton extends StatelessWidget {
+  final _ProfileLink link;
+
+  const _ProfileIconButton({required this.link});
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () async {
+        if (link.url.startsWith('mailto:')) {
+          // Handle email link with error handling
+          try {
+            final Uri email =
+                Uri.parse(link.url); // Remove query parameters if needed
+            if (await canLaunchUrl(email)) {
+              await launchUrl(email);
+            } else {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                    content: Text('No email app found. Please install one.')),
+              );
+            }
+          } catch (error) {
+            print('Error launching email: $error');
+          }
+        } else {
+          // Handle other links
+          if (await canLaunchUrl(Uri.parse(link.url))) {
+            launchUrl(Uri.parse(link.url));
+          }
+        }
+      },
+      icon: ImageIcon(
+        AssetImage(link.iconAssetPath),
+        color: Colors.amber,
+        size: 50,
+      ),
     );
   }
 }
