@@ -8,6 +8,8 @@ class HomeProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: Stack(
         alignment: AlignmentDirectional.center,
@@ -17,10 +19,14 @@ class HomeProfile extends StatelessWidget {
             width: double.infinity,
             fit: BoxFit.cover,
           ),
-          const ProfileDetails(),
-          const Positioned(
-            bottom: 150,
-            child: ProfileCard(),
+          // Use a flexible layout for ProfileDetails
+          const Flexible(
+            child: ProfileDetails(),
+          ),
+          // Adjust Positioned widget based on screen width
+          Positioned(
+            bottom: screenWidth > 600 ? 250 : 150, // Adapt for larger screens
+            child: const ProfileCard(),
           ),
         ],
       ),

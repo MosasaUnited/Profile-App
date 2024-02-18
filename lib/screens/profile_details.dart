@@ -12,8 +12,10 @@ class ProfileDetails extends StatelessWidget {
         ),
         CircleAvatar(
           backgroundImage: NetworkImage(
-              'https://media.licdn.com/dms/image/D4D03AQFiTCp3Y73s5g/profile-displayphoto-shrink_400_400/0/1699323451283?e=1713398400&v=beta&t=QU_LwYeaahmAI-gH2JsPlRrNRdy3tM9-n5bDnyptzfQ'),
+            'https://media.licdn.com/dms/image/D4D03AQFiTCp3Y73s5g/profile-displayphoto-shrink_400_400/0/1699323451283?e=1713398400&v=beta&t=QU_LwYeaahmAI-gH2JsPlRrNRdy3tM9-n5bDnyptzfQ',
+          ),
           radius: 100,
+          backgroundColor: Colors.transparent,
         ),
         SizedBox(
           height: 15,
