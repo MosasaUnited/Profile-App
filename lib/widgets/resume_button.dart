@@ -15,6 +15,7 @@ class ResumeButton extends StatelessWidget {
         child: const Text(
           'Resume',
           style: TextStyle(
+            color: Colors.deepPurple,
             fontWeight: FontWeight.w900,
             fontSize: 22,
             fontStyle: FontStyle.italic,
