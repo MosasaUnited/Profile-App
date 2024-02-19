@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile_app/widgets/custom_button_animation.dart';
+import 'package:profile_app/widgets/resume.dart';
 
 class ResumeButton extends StatelessWidget {
   const ResumeButton({super.key});
@@ -11,7 +12,14 @@ class ResumeButton extends StatelessWidget {
       bottom: screenWidth > 600 ? 80 : 40, // Adapt for larger screens
       child: CustomButtonAnimation(
         color: Colors.amber,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Resume(),
+            ),
+          );
+        },
         child: const Text(
           'Resume',
           style: TextStyle(

@@ -6,7 +6,7 @@ class CustomButtonAnimation extends StatefulWidget {
   const CustomButtonAnimation(
       {super.key,
       required this.child,
-      this.color = Colors.green,
+      this.color = Colors.amber,
       required this.onPressed});
 
   final Duration _duration = const Duration(milliseconds: 70);
