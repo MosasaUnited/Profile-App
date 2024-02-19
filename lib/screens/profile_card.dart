@@ -32,15 +32,20 @@ class ProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        for (final link in _profileLinks)
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: ProfileIconButton(link: link),
-          ),
-      ],
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    return Positioned(
+      bottom: screenWidth > 600 ? 250 : 150, // Adapt for larger screens
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          for (final link in _profileLinks)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: ProfileIconButton(link: link),
+            ),
+        ],
+      ),
     );
   }
 }

@@ -37,17 +37,7 @@ class ProfileDetails extends StatelessWidget {
               fontSize: 15),
         ),
         SizedBox(
-          height: 5,
-        ),
-        Text(
-          'Description',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-        ),
-        SizedBox(
-          height: 20,
+          height: 50,
         ),
         Divider(
           color: Colors.white,
