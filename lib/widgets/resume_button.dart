@@ -8,25 +8,29 @@ class ResumeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+
     return Positioned(
-      bottom: screenWidth > 600 ? 80 : 40, // Adapt for larger screens
-      child: CustomButtonAnimation(
-        color: Colors.amber,
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const Resume(),
+      bottom: screenWidth > 600 ? 80 : 50, // Adapt for larger screens
+      child: Hero(
+        transitionOnUserGestures: true,
+        tag: 'resumeButton', // Unique tag for animation
+        child: CustomButtonAnimation(
+          key: UniqueKey(),
+          color: Colors.amber,
+          onPressed: () async {
+            await Navigator.of(context)
+                .push(MaterialPageRoute<void>(builder: (context) {
+              return const Resume();
+            }));
+          },
+          child: const Text(
+            'Resume',
+            style: TextStyle(
+              color: Colors.deepPurple,
+              fontWeight: FontWeight.w900,
+              fontSize: 22,
+              fontStyle: FontStyle.italic,
             ),
-          );
-        },
-        child: const Text(
-          'Resume',
-          style: TextStyle(
-            color: Colors.deepPurple,
-            fontWeight: FontWeight.w900,
-            fontSize: 22,
-            fontStyle: FontStyle.italic,
           ),
         ),
       ),
