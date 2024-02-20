@@ -21,9 +21,14 @@ class Resume extends StatelessWidget {
       body: Center(
         child: SizedBox(
           width: screenWidth * 0.9, // Adjust width based on screen
-          child: Image.asset(
-            resume,
-            fit: BoxFit.cover,
+          child: InteractiveViewer(
+            minScale: 0.5, // Set minimum zoom level (optional)
+            maxScale: 2.0, // Set maximum zoom level (optional)
+            boundaryMargin: EdgeInsets.zero,
+            child: Image.asset(
+              resume,
+              fit: BoxFit.cover,
+            ), // Remove padding around image (optional)
           ),
         ),
       ),
