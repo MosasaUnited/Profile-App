@@ -7,6 +7,10 @@ class Resume extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight =
+        MediaQuery.of(context).size.height; // Corrected height access
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -17,11 +21,12 @@ class Resume extends StatelessWidget {
         elevation: 0.0,
       ),
       body: Center(
-        child: Image.asset(
-          resume,
-          height: 850,
-          width: 600,
-          fit: BoxFit.cover,
+        child: SizedBox(
+          width: screenWidth * 0.9, // Adjust width based on screen
+          child: Image.asset(
+            resume,
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
