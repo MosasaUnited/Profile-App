@@ -35,8 +35,12 @@ class ResumeButton extends StatelessWidget {
               ),
             )
                 .animate(
-                    delay: 1000.ms, onPlay: (controller) => controller.repeat())
-                .tint(color: Colors.white, delay: 5000.ms),
+                    delay: 200.ms, onPlay: (controller) => controller.repeat())
+                .tint(
+                  color: Colors.white,
+                  delay: 5000.ms,
+                  duration: const Duration(milliseconds: 5000),
+                ),
           ),
         ),
       ),
