@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/image_widget.dart';
+import '../widgets/job_description_widget.dart';
+import '../widgets/name_widget.dart';
+
 class ProfileDetails extends StatelessWidget {
   const ProfileDetails({super.key});
 
@@ -10,32 +14,15 @@ class ProfileDetails extends StatelessWidget {
         SizedBox(
           height: 40,
         ),
-        CircleAvatar(
-          backgroundImage: AssetImage(
-            'assets/images/profile_image.jpg',
-          ),
-          radius: 100,
-          backgroundColor: Colors.transparent,
-        ),
+        ImageWidget(),
         SizedBox(
           height: 15,
         ),
-        Text(
-          'Mostafa Mahmoud Saad',
-          style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.w900, fontSize: 20),
-        ),
+        NameWidget(),
         SizedBox(
           height: 10,
         ),
-        Text(
-          'Flutter Developer',
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w500,
-              fontStyle: FontStyle.italic,
-              fontSize: 15),
-        ),
+        JobDescription(),
         SizedBox(
           height: 50,
         ),
