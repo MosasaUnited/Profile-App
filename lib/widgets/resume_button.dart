@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:go_router/go_router.dart';
 import 'package:profile_app/widgets/custom_button_animation.dart';
-import 'package:profile_app/widgets/resume.dart';
+
+import '../utils/app_router.dart';
 
 class ResumeButton extends StatelessWidget {
   const ResumeButton({super.key});
@@ -19,10 +21,9 @@ class ResumeButton extends StatelessWidget {
           key: UniqueKey(),
           color: Colors.amber,
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute<void>(builder: (context) {
-              return const Resume();
-            }));
+            Future.delayed(const Duration(milliseconds: 400), () {
+              GoRouter.of(context).push(AppRouter.kResume);
+            });
           },
           child: Animate(
             child: const Text(
