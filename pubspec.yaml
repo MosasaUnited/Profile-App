@@ -106,10 +106,16 @@ flutter_launcher_icons:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
+    fonts:
       - family: Icon ly-Broken
         fonts:
           - asset: fonts/icons.ttf
+      - family: Gt-Sectra
+        fonts:
+          - asset: assets/fonts/GT-Sectra-Fine-Black-Italic.ttf
+      - family: Cairo_Semi
+        fonts:
+          - asset: assets/fonts/Cairo-SemiBold.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

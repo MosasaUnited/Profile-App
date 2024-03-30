@@ -10,7 +10,11 @@ class NameWidget extends StatelessWidget {
       child: const Text(
         'Mostafa Mahmoud Saad',
         style: TextStyle(
-            color: Colors.white, fontWeight: FontWeight.w900, fontSize: 20),
+          fontFamily: 'Cairo_Semi',
+          color: Colors.white,
+          fontWeight: FontWeight.w700,
+          fontSize: 22,
+        ),
       ),
     );
   }

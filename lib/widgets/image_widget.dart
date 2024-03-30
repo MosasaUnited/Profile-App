@@ -7,7 +7,7 @@ class ImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Opacity(
-      opacity: .85,
+      opacity: .82,
       child: CircleAvatar(
         backgroundImage: AppImages.profileImage,
         radius: 100,

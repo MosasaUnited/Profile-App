@@ -29,6 +29,9 @@ class ProfileDetails extends StatelessWidget {
         Divider(
           color: Colors.white,
         ),
+        SizedBox(
+          height: 10,
+        ),
       ],
     );
   }
