@@ -9,15 +9,17 @@ class HomeProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Stack(
-        alignment: Alignment.center,
-        children: [
-          LottieFile(),
-          ProfileDetails(),
-          ProfileCard(),
-          ResumeButton(),
-        ],
+    return const SafeArea(
+      child: Scaffold(
+        body: Stack(
+          alignment: Alignment.center,
+          children: [
+            AppBackground(),
+            ProfileDetails(),
+            ProfileCard(),
+            ResumeButton(),
+          ],
+        ),
       ),
     );
   }

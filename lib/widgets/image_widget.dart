@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:profile_app/core/images.dart';
 
 class ImageWidget extends StatelessWidget {
   const ImageWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const CircleAvatar(
-      backgroundImage: AssetImage(
-        'assets/images/profile_image.jpg',
+    return Opacity(
+      opacity: .85,
+      child: CircleAvatar(
+        backgroundImage: AppImages.profileImage,
+        radius: 100,
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.amber,
       ),
-      radius: 100,
-      backgroundColor: Colors.transparent,
     );
   }
 }
