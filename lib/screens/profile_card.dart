@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/strings.dart';
 import '../widgets/profile_icon_button.dart';
 
 final Uri email = Uri.parse('mailto:mostafa447@hotmail.com');
@@ -9,22 +10,22 @@ class ProfileCard extends StatelessWidget {
 
   static const _profileLinks = [
     ProfileLink(
-      url: 'tel:+201224774051',
+      url: AppStrings.myPhone,
       iconAssetPath: 'assets/icons/whatsapp.png',
       label: 'WhatsApp',
     ),
     ProfileLink(
-      url: 'mailto:mostafa447@hotmail.com',
+      url: AppStrings.myEmail,
       iconAssetPath: 'assets/icons/email.png',
       label: 'Email',
     ),
     ProfileLink(
-      url: 'https://github.com/MosasaUnited',
+      url: AppStrings.myGithub,
       iconAssetPath: 'assets/icons/github.png',
       label: 'GitHub',
     ),
     ProfileLink(
-      url: 'https://linkedin.com/in/mostafa-saad-247b5914b',
+      url: AppStrings.myLinkedIn,
       iconAssetPath: 'assets/icons/linkedin.png',
       label: 'LinkedIn',
     ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
+import '../core/strings.dart';
+
 class NameWidget extends StatelessWidget {
   const NameWidget({super.key});
 
@@ -8,7 +10,7 @@ class NameWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Animate(
       child: const Text(
-        'Mostafa Mahmoud Saad',
+        AppStrings.myName,
         style: TextStyle(
           fontFamily: 'Cairo_Semi',
           color: Colors.white,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+;
+import '../core/strings.dart';
 
 class JobDescription extends StatelessWidget {
   const JobDescription({super.key});
@@ -7,12 +9,12 @@ class JobDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Animate(
-      child: const Text('Flutter Developer',
+      child: const Text(AppStrings.myJob,
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w500,
                   fontStyle: FontStyle.italic,
-                  fontSize: 15))
+                  fontSize: 15),)
           .animate(delay: 200.ms, onPlay: (controller) => controller.repeat())
           .scale(
             curve: Curves.ease,
