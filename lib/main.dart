@@ -20,10 +20,10 @@ class ProfileApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
-        useMaterial3: false,
+        useMaterial3: true,
       ),
       routerConfig: AppRouter.router,
-      useInheritedMediaQuery: true,
+      useInheritedMediaQuery: false,
     );
   }
 }
