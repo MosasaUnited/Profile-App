@@ -4,9 +4,9 @@
 
 This project showcases a remarkable mobile application that acts as your interactive digital profile, seamlessly adapting its design to various screen sizes. Whether you're using a mobile phone, tablet, web browser, or desktop computer, the app guarantees an exceptional viewing experience that highlights your unique identity.
 
-**!** Mobile Preview:![IMG-20240402-WA0003](https://github.com/MosasaUnited/Profile-App/assets/79766907/c99431e2-d087-420f-b7c6-9faca5590743)
+**!** ![IMG-20240402-WA0003](https://github.com/MosasaUnited/Profile-App/assets/79766907/c99431e2-d087-420f-b7c6-9faca5590743)
 
-**!**  Web Preview:![IMG-20240402-WA0002](https://github.com/MosasaUnited/Profile-App/assets/79766907/30fef04c-60f9-4ae9-9984-501b9cc7085d)
+**!**  ![IMG-20240402-WA0002](https://github.com/MosasaUnited/Profile-App/assets/79766907/30fef04c-60f9-4ae9-9984-501b9cc7085d)
 
 
 **Key Features:**
