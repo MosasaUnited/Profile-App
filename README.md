@@ -1,4 +1,4 @@
-**Profile App**
+***Profile App***
 
 This project showcases a mobile application that acts as your digital profile, offering a responsive design that adapts beautifully to various screen sizes. Whether you're using a mobile phone, tablet, web browser, or desktop computer, the app will provide an optimal viewing experience.
 
@@ -8,17 +8,17 @@ This project showcases a mobile application that acts as your digital profile, o
 
 
 
-*Features:*
+**Features:**
 
 - Display basic profile information
 - Integrate with other platforms like LinkedIn, Github, WhatsApp
 - Include a Resume Button section
 
-*Technologies Used:*
+**Technologies Used:**
 
-Flutter
+*Flutter*
 
-*Packages:*
+**Packages:**
 - url_launcher: Launches external URLs (https://pub.dev/packages/url_launcher)
 - figma_squircle: Creates squircle shaped widgets used in Figma design (https://pub.dev/documentation/figma_squircle/latest/)
 - flutter_animate: Provides animation capabilities for Flutter apps (https://pub.dev/packages/flutter_animate)
