@@ -18,7 +18,7 @@ This project showcases a remarkable mobile application that acts as your interac
 
 **Technologies Used:**
 
-* **Flutter:**
+* **Flutter**
 
 
 **Packages:**
