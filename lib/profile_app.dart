@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/utils/app_router.dart';
 
+import 'core/theme/theme_data_style.dart';
+
 class ProfileApp extends StatelessWidget {
   const ProfileApp({super.key});
 
@@ -13,11 +15,12 @@ class ProfileApp extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp.router(
         locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
+        title: 'Profile App',
+        themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
-          useMaterial3: true,
-        ),
+        theme: ThemeDataStyle.light,
+        darkTheme: ThemeDataStyle.dark,
         routerConfig: AppRouter.router,
       ),
     );
