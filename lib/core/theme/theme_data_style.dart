@@ -11,7 +11,7 @@ class ThemeDataStyle {
     ),
     fontFamily: 'Cairo',
     colorScheme: ColorScheme.light(
-      background: Colors.white,
+      surface: Colors.white,
       primary: Colors.deepPurple.shade700,
       secondary: Colors.deepPurple.shade300,
     ),
@@ -27,7 +27,7 @@ class ThemeDataStyle {
     ),
     fontFamily: 'Cairo',
     colorScheme: ColorScheme.dark(
-      background: Colors.grey.shade900,
+      surface: Colors.grey.shade900,
       primary: Colors.deepPurple.shade500,
       secondary: Colors.deepPurple.shade700,
     ),
