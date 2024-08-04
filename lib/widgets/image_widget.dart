@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/core/images.dart';
 
 class ImageWidget extends StatelessWidget {
@@ -10,7 +11,7 @@ class ImageWidget extends StatelessWidget {
       opacity: .82,
       child: CircleAvatar(
         backgroundImage: AppImages.profileImage,
-        radius: 100,
+        radius: 100.r,
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.amber,
       ),

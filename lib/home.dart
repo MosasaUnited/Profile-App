@@ -16,6 +16,7 @@ class HomeProfile extends StatelessWidget {
           children: [
             AppBackground(),
             ProfileDetails(),
+            SizedBox(),
             ProfileCard(),
             ResumeButton(),
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../widgets/image_widget.dart';
 import '../widgets/job_description_widget.dart';
@@ -9,28 +10,28 @@ class ProfileDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
         SizedBox(
-          height: 40,
+          height: 40.h,
         ),
-        ImageWidget(),
+        const ImageWidget(),
         SizedBox(
-          height: 15,
+          height: 15.h,
         ),
-        NameWidget(),
+        const NameWidget(),
         SizedBox(
-          height: 10,
+          height: 10.h,
         ),
-        JobDescription(),
+        const JobDescription(),
         SizedBox(
-          height: 50,
+          height: 50.h,
         ),
-        Divider(
+        const Divider(
           color: Colors.white,
         ),
         SizedBox(
-          height: 10,
+          height: 10.h,
         ),
       ],
     );
