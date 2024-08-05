@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../data/models/profile_link_model.dart';
+
 class ProfileIconButton extends StatelessWidget {
   final ProfileLink link;
 
@@ -20,11 +22,25 @@ class ProfileIconButton extends StatelessWidget {
             } else {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                    content: Text('No email app found. Please install one.')),
+                  content: Text('No email app found. Please install one.'),
+                  backgroundColor: Colors.redAccent,
+                ),
               );
             }
           } catch (error) {
             print('Error launching email: $error');
+          }
+        } else if (link.url.startsWith('whatsapp://')) {
+          // Handle WhatsApp Link
+          if (await canLaunchUrl(Uri.parse(link.url))) {
+            await launchUrl(Uri.parse(link.url));
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('WhatsApp Not Installed'),
+                backgroundColor: Colors.redAccent,
+              ),
+            );
           }
         } else {
           // Handle other links
@@ -40,16 +56,4 @@ class ProfileIconButton extends StatelessWidget {
       ),
     );
   }
-}
-
-class ProfileLink {
-  final String url;
-  final String iconAssetPath;
-  final String label;
-
-  const ProfileLink({
-    required this.url,
-    required this.iconAssetPath,
-    required this.label,
-  });
 }

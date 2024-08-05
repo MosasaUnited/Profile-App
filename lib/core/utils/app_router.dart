@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
-import 'package:profile_app/features/home/home.dart';
+import 'package:profile_app/features/home/presentation/home.dart';
 
-import '../../features/home/widgets/resume.dart';
+import '../../features/home/presentation/widgets/resume.dart';
 
 abstract class AppRouter {
   static const kHome = '/';

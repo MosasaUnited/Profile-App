@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/strings.dart';
+import '../../../../core/strings.dart';
+import '../../data/models/profile_link_model.dart';
 import '../widgets/profile_icon_button.dart';
-
-final Uri email = Uri.parse('mailto:mostafa447@hotmail.com');
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
 
   static const _profileLinks = [
     ProfileLink(
-      url: AppStrings.myPhone,
+      url: AppStrings.myWhatsapp,
       iconAssetPath: 'assets/icons/whatsapp.png',
       label: 'WhatsApp',
     ),
