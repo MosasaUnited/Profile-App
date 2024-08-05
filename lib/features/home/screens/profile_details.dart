@@ -25,7 +25,7 @@ class ProfileDetails extends StatelessWidget {
         ),
         const JobDescription(),
         SizedBox(
-          height: 50.h,
+          height: 20.h,
         ),
         const Divider(
           color: Colors.white,

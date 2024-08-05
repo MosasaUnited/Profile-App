@@ -13,22 +13,25 @@ class Resume extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back_ios_new_outlined,
+              color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         elevation: 0.0,
       ),
-      body: Center(
-        child: SizedBox(
-          width: screenWidth * 0.9, // Adjust width based on screen
-          child: InteractiveViewer(
-            minScale: 0.5, // Set minimum zoom level (optional)
-            maxScale: 2.0, // Set maximum zoom level (optional)
-            boundaryMargin: EdgeInsets.zero,
-            child: Image.asset(
-              resume,
-              fit: BoxFit.cover,
-            ), // Remove padding around image (optional)
+      body: SingleChildScrollView(
+        child: Center(
+          child: SizedBox(
+            width: screenWidth * 0.8, // Adjust width based on screen
+            child: InteractiveViewer(
+              minScale: 0.5, // Set minimum zoom level (optional)
+              maxScale: 2.0, // Set maximum zoom level (optional)
+              boundaryMargin: EdgeInsets.zero,
+              child: Image.asset(
+                resume,
+                fit: BoxFit.cover,
+              ), // Remove padding around image (optional)
+            ),
           ),
         ),
       ),
