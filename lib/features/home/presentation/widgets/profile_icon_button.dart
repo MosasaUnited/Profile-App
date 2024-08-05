@@ -22,30 +22,36 @@ class ProfileIconButton extends StatelessWidget {
             } else {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                  content: Text('No email app found. Please install one.'),
-                  backgroundColor: Colors.redAccent,
+                  content: Text(
+                    'No email app found. Please install one.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  backgroundColor: Colors.red,
                 ),
               );
             }
           } catch (error) {
             print('Error launching email: $error');
           }
-        } else if (link.url.startsWith('whatsapp://')) {
-          // Handle WhatsApp Link
-          if (await canLaunchUrl(Uri.parse(link.url))) {
-            await launchUrl(Uri.parse(link.url));
-          } else {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('WhatsApp Not Installed'),
-                backgroundColor: Colors.redAccent,
-              ),
-            );
-          }
         } else {
           // Handle other links
           if (await canLaunchUrl(Uri.parse(link.url))) {
             launchUrl(Uri.parse(link.url));
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text(
+                  'Not Found , Please Check The Url',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                backgroundColor: Colors.red,
+              ),
+            );
           }
         }
       },
