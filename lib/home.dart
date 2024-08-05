@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:profile_app/screens/profile_card.dart';
-import 'package:profile_app/screens/profile_details.dart';
-import 'package:profile_app/widgets/lottie_file.dart';
-import 'package:profile_app/widgets/resume_button.dart';
+
+import 'features/home/screens/profile_card.dart';
+import 'features/home/screens/profile_details.dart';
+import 'features/home/widgets/lottie_file.dart';
+import 'features/home/widgets/resume_button.dart';
 
 class HomeProfile extends StatelessWidget {
   const HomeProfile({super.key});

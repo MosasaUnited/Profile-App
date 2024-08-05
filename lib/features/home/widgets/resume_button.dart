@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
-import 'package:profile_app/widgets/custom_button_animation.dart';
 
-import '../utils/app_router.dart';
+import '../../../core/utils/app_router.dart';
+import 'custom_button_animation.dart';
 
 class ResumeButton extends StatelessWidget {
   const ResumeButton({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../core/strings.dart';
+import '../../../core/strings.dart';
 import '../widgets/profile_icon_button.dart';
 
 final Uri email = Uri.parse('mailto:mostafa447@hotmail.com');

@@ -1,9 +1,9 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:profile_app/utils/app_router.dart';
 
 import 'core/theme/theme_data_style.dart';
+import 'core/utils/app_router.dart';
 
 class ProfileApp extends StatelessWidget {
   const ProfileApp({super.key});
