@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'download_resume_button.dart';
+
 class Resume extends StatelessWidget {
   const Resume({super.key});
 
@@ -17,6 +19,9 @@ class Resume extends StatelessWidget {
               color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
+        actions: [
+          DownloadResumeButton(),
+        ],
         elevation: 0.0,
       ),
       body: SingleChildScrollView(

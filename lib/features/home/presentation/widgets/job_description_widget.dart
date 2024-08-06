@@ -18,9 +18,7 @@ class JobDescription extends StatelessWidget {
           fontStyle: FontStyle.italic,
           fontSize: 12.sp,
         ),
-      )
-          .animate(delay: 200.ms, onPlay: (controller) => controller.repeat())
-          .scale(
+      ).animate(delay: 200.ms, onPlay: (controller) => controller.repeat).scale(
             curve: Curves.ease,
             delay: 5000.ms,
             duration: const Duration(milliseconds: 5000),
