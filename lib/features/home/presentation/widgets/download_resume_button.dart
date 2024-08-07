@@ -11,30 +11,21 @@ class DownloadResumeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: SizedBox(
-        height: 35.h,
-        width: 37.w,
-        child: ElevatedButton(
-          onPressed: () => launchUrl(url),
-          style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all(Colors.purpleAccent),
-            shape: WidgetStateProperty.all(const LinearBorder()),
-          ),
-          child: Row(
-            children: [
-              const Text(
-                'Download In PDF',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
-                width: 2.w,
-              ),
-              const Icon(Icons.download_outlined, color: Colors.white),
-            ],
+      padding: EdgeInsets.symmetric(horizontal: 10.w),
+      child: IconButton(
+        icon: Icon(
+          Icons.download,
+          color: Colors.white,
+          size: 7.w,
+        ),
+        onPressed: () => launchUrl(url),
+        style: ButtonStyle(
+          backgroundColor: WidgetStateProperty.all(Colors.purpleAccent[200]),
+          shadowColor: WidgetStateProperty.all(Colors.purple),
+          shape: WidgetStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50),
+            ),
           ),
         ),
       ),
