@@ -21,11 +21,11 @@ class AboutScreenBody extends StatelessWidget {
             children: [
               const AboutMeWidget(),
               SizedBox(
-                height: 50.h,
+                height: 100.h,
               ),
               const CustomDivider(),
               SizedBox(
-                height: 50.h,
+                height: 100.h,
               ),
               const ExperienceWidget(),
             ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ExpandableText extends StatefulWidget {
   final String text;
@@ -19,10 +20,7 @@ class _ExpandableTextState extends State<ExpandableText> {
       children: [
         Text(
           isExpanded ? widget.text : widget.text.substring(0, 100),
-          style: TextStyle(
-            fontSize: 12.sp,
-            fontWeight: FontWeight.w700,
-          ),
+          style: GoogleFonts.acme(),
           maxLines: isExpanded ? null : 3,
           // overflow: TextOverflow.ellipsis,
         ),
