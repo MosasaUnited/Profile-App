@@ -29,7 +29,10 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
       children: [
         SegmentedButtonSlide(
           selectedEntry: selectedOption,
-          onChange: (selected) => setState(() => selectedOption = selected),
+          onChange: (selected) => setState(
+            () => selectedOption = selected,
+          ),
+          curve: Curves.bounceInOut,
           entries: const [
             SegmentedButtonSlideEntry(
               icon: Icons.hail_outlined,

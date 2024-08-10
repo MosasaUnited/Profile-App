@@ -6,7 +6,14 @@ class ProjectsScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      children: [],
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const TitleText(),
+        SizedBox(
+          height: 50.h,
+        ),
+        Expanded(child: ProjectsGrid())
+      ],
     );
   }
 }

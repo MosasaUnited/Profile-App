@@ -22,7 +22,6 @@ class _ExpandableTextState extends State<ExpandableText> {
           isExpanded ? widget.text : widget.text.substring(0, 100),
           style: GoogleFonts.acme(),
           maxLines: isExpanded ? null : 3,
-          // overflow: TextOverflow.ellipsis,
         ),
         TextButton(
           onPressed: () {
