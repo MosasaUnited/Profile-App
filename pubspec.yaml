@@ -48,6 +48,8 @@ dependencies:
   # Adapting Screen
   flutter_screenutil: ^5.9.3
   web: 0.5.1
+  # Segmented Button
+  segmented_button_slide: ^2.0.0
 
 dev_dependencies:
   flutter_test:

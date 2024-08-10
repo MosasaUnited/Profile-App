@@ -1,10 +1,12 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class ProjectsScreenBody extends StatelessWidget {
   const ProjectsScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Column(
+      children: [],
+    );
   }
 }

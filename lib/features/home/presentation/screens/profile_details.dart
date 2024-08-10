@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:profile_app/core/widgets/custom_divider.dart';
 
 import '../widgets/image_widget.dart';
 import '../widgets/job_description_widget.dart';
@@ -27,9 +28,7 @@ class ProfileDetails extends StatelessWidget {
         SizedBox(
           height: 20.h,
         ),
-        const Divider(
-          color: Colors.white,
-        ),
+        const CustomDivider(),
         SizedBox(
           height: 10.h,
         ),

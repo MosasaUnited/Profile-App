@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:profile_app/app_view_body.dart';
-import 'package:profile_app/features/home/presentation/home.dart';
+import 'package:profile_app/features/home/presentation/home_profile.dart';
 
 import '../../features/about/presentation/about_screen.dart';
 import '../../features/home/presentation/widgets/resume.dart';
