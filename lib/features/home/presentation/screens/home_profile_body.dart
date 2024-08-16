@@ -12,10 +12,16 @@ class HomeProfileBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(
+          height: 50.h,
+        ),
         const ProfileDetails(),
+        SizedBox(
+          height: 10.h,
+        ),
         const ProfileCard(),
         SizedBox(
-          height: 20.h,
+          height: 5.h,
         ),
         const ResumeButton(),
       ],

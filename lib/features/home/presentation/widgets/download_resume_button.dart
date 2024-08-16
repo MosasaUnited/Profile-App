@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:profile_app/core/strings.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../../core/constants/strings.dart';
 
 class DownloadResumeButton extends StatelessWidget {
   DownloadResumeButton({super.key});

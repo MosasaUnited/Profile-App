@@ -21,6 +21,9 @@ class TitleText extends StatelessWidget {
                 fontWeight: FontWeight.w900,
               ),
         ),
+        SizedBox(
+          width: 5.w,
+        ),
         kIsWeb
             ? ShaderMask(
                 shaderCallback: (bounds) {

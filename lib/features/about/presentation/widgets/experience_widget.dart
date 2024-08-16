@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/images.dart';
+import '../../../../core/constants/images.dart';
+import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/expandable_text.dart';
 
@@ -13,12 +14,13 @@ class ExperienceWidget extends StatelessWidget {
     return Column(
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               'Experience',
               style: Styles.textStyle20.copyWith(
                 fontWeight: FontWeight.w900,
+                color: MyColors.myYellow,
               ),
             ),
           ],

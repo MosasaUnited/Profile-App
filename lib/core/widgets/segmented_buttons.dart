@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:profile_app/features/about/presentation/about_screen.dart';
-import 'package:profile_app/features/projects/presentation/projects_screen.dart';
 import 'package:segmented_button_slide/segmented_button_slide.dart';
 
+import '../../features/about/presentation/about_screen.dart';
 import '../../features/home/presentation/home_profile.dart';
-import '../../features/home/presentation/widgets/lottie_file.dart';
 
 class SegmentedButtons extends StatefulWidget {
   const SegmentedButtons({Key? key}) : super(key: key);
@@ -26,6 +24,7 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SegmentedButtonSlide(
           selectedEntry: selectedOption,
@@ -35,15 +34,15 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
           curve: Curves.bounceInOut,
           entries: const [
             SegmentedButtonSlideEntry(
-              icon: Icons.hail_outlined,
+              icon: Icons.home,
               label: 'Home',
             ),
             SegmentedButtonSlideEntry(
-              icon: Icons.align_vertical_bottom_outlined,
-              label: "About",
+              icon: Icons.record_voice_over,
+              label: "OverView",
             ),
             SegmentedButtonSlideEntry(
-              icon: Icons.workspace_premium_outlined,
+              icon: Icons.workspace_premium,
               label: "Projects",
             ),
           ],
@@ -75,19 +74,17 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
           ),
         ),
         SizedBox(height: 16.h), // Add spacing between buttons and text
-        Stack(
+        Column(
           children: [
-            const AppBackground(),
-            Column(
-              children: [
-                if (selectedOption == 0)
-                  const HomeProfile()
-                else if (selectedOption == 1)
-                  const AboutScreen()
-                else
-                  const ProjectsScreen()
-              ],
-            )
+            if (selectedOption == 0)
+              // const Text('Home Profile')
+              const HomeProfile()
+            else if (selectedOption == 1)
+              // const Text('About Screen')
+              const AboutScreen()
+            else
+              const Text('Project Screen')
+            // const ProjectsScreen()
           ],
         ),
       ],

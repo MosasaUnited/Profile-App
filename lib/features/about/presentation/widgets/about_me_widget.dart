@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/core/theme/styles.dart';
 
-import '../../../../core/images.dart';
+import '../../../../core/constants/images.dart';
+import '../../../../core/theme/colors.dart';
 import '../../../../core/widgets/expandable_text.dart';
 
 class AboutMeWidget extends StatelessWidget {
@@ -13,13 +14,12 @@ class AboutMeWidget extends StatelessWidget {
     return Column(
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               'About',
               style: Styles.textStyle20.copyWith(
-                fontWeight: FontWeight.w900,
-              ),
+                  fontWeight: FontWeight.w900, color: MyColors.myYellow),
             ),
           ],
         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/strings.dart';
+import '../../../../core/constants/strings.dart';
 import '../../data/models/profile_link_model.dart';
 import '../widgets/profile_icon_button.dart';
 
@@ -34,8 +35,10 @@ class ProfileCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
 
-    return Positioned(
-      bottom: screenWidth > 600 ? 250 : 150, // Adapt for larger screens
+    return Container(
+      margin: EdgeInsets.only(
+        bottom: 80.h,
+      ), // Adapt for larger screens
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

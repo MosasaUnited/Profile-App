@@ -11,7 +11,7 @@ abstract class AppRouter {
   static const kHomeScreen = '/Home';
   static const kResume = '/resume';
   static const kAboutScreen = '/about';
-  static const kProjectScreen = '/about';
+  static const kProjectScreen = '/projects';
 
   static final router = GoRouter(
     routes: [

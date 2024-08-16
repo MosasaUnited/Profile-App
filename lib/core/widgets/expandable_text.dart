@@ -20,7 +20,9 @@ class _ExpandableTextState extends State<ExpandableText> {
       children: [
         Text(
           isExpanded ? widget.text : widget.text.substring(0, 100),
-          style: GoogleFonts.acme(),
+          style: GoogleFonts.acme().copyWith(
+            fontSize: 14.sp,
+          ),
           maxLines: isExpanded ? null : 3,
         ),
         TextButton(

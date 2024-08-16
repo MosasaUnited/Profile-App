@@ -1,6 +1,5 @@
 class AppStrings {
   static const String myName = 'Mostafa Mahmoud Saad';
-  static const String myJob = 'Flutter Developer';
   static const String myWhatsapp = 'https://wa.me/+201224774051';
   static const String myEmail = 'mailto:mostafa447@hotmail.com';
   static const String myGithub = 'https://github.com/MosasaUnited';

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../widgets/title_text.dart';
+import '../../../../core/widgets/title_text.dart';
+import '../widgets/projects_grid.dart';
 
 class ProjectsScreenBody extends StatelessWidget {
   const ProjectsScreenBody({super.key});
@@ -11,14 +12,16 @@ class ProjectsScreenBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TitleText(
-          title: 'Latest',
-          prefix: 'Projects',
+        const TitleText(
+          prefix: 'Latest',
+          title: 'Projects',
         ),
         SizedBox(
           height: 50.h,
         ),
-        Expanded(child: ProjectsGrid())
+        const Expanded(
+          child: ProjectGrid(),
+        ),
       ],
     );
   }

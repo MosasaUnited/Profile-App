@@ -12,8 +12,10 @@ class ResumeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
 
-    return Positioned(
-      bottom: screenWidth > 600 ? 80 : 50, // Adapt for larger screens
+    return Container(
+      margin: EdgeInsets.only(
+        bottom: screenWidth > 600 ? 80 : 50,
+      ), // Adapt for larger screens
       child: Hero(
         transitionOnUserGestures: true,
         tag: 'resumeButton', // Unique tag for animation

@@ -29,9 +29,6 @@ class ProfileDetails extends StatelessWidget {
           height: 20.h,
         ),
         const CustomDivider(),
-        SizedBox(
-          height: 10.h,
-        ),
       ],
     );
   }
