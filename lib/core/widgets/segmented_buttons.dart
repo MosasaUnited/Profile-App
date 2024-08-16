@@ -4,6 +4,7 @@ import 'package:segmented_button_slide/segmented_button_slide.dart';
 
 import '../../features/about/presentation/about_screen.dart';
 import '../../features/home/presentation/home_profile.dart';
+import '../../features/projects/presentation/projects_screen.dart';
 
 class SegmentedButtons extends StatefulWidget {
   const SegmentedButtons({Key? key}) : super(key: key);
@@ -83,8 +84,8 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
               // const Text('About Screen')
               const AboutScreen()
             else
-              const Text('Project Screen')
-            // const ProjectsScreen()
+              // const Text('Project Screen'),
+              const ProjectsScreen()
           ],
         ),
       ],

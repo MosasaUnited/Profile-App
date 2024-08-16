@@ -14,9 +14,10 @@ class ProjectGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
+    return BlocProvider<ProjectsCubit>(
       create: (context) => ProjectsCubit(projectList.length),
       child: GridView.builder(
+        shrinkWrap: true,
         padding: const EdgeInsets.symmetric(horizontal: 30),
         itemCount: projectList.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

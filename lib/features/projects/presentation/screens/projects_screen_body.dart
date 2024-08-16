@@ -19,9 +19,7 @@ class ProjectsScreenBody extends StatelessWidget {
         SizedBox(
           height: 50.h,
         ),
-        const Expanded(
-          child: ProjectGrid(),
-        ),
+        const ProjectGrid(),
       ],
     );
   }
