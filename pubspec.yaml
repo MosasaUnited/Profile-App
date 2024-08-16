@@ -87,6 +87,7 @@ flutter:
       - assets/lottie/
       - assets/icons/
       - assets/fonts/
+      - assets/svg/
   fonts:
     - family: Cairo
       fonts:

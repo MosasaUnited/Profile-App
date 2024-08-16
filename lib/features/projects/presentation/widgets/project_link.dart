@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../core/constants/images.dart';
 import '../../data/models/project_model.dart';
 
 class ProjectLinks extends StatelessWidget {
@@ -17,10 +17,11 @@ class ProjectLinks extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
                 overflow: TextOverflow.ellipsis),
             IconButton(
-                onPressed: () {
-                  launchUrl(Uri.parse(projectList[index].link));
-                },
-                icon: SvgPicture.asset('assets/icons/github.svg')),
+              onPressed: () {
+                launchUrl(Uri.parse(projectList[index].link));
+              },
+              icon: AppImages.githubIcon,
+            )
           ],
         ),
         const Spacer(),
@@ -32,9 +33,10 @@ class ProjectLinks extends StatelessWidget {
               'Read More>>',
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                  color: Colors.amber,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 10),
+                color: Colors.amber,
+                fontWeight: FontWeight.bold,
+                fontSize: 10,
+              ),
             ))
       ],
     );

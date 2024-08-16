@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 
 class AppImages {
@@ -11,5 +12,8 @@ class AppImages {
   );
   static AssetImage profileImage = const AssetImage(
     'assets/images/profile_image.jpg',
+  );
+  static SvgPicture githubIcon = SvgPicture.asset(
+    'assets/svg/github.svg',
   );
 }
