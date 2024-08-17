@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/features/projects/presentation/widgets/project_info.dart';
 
 import '../../data/models/project_model.dart';
@@ -29,9 +30,9 @@ class ProjectGrid extends StatelessWidget {
             builder: (context, state) {
               return AnimatedContainer(
                 duration: const Duration(milliseconds: 200),
-                margin: const EdgeInsets.symmetric(
-                  vertical: 20.0,
-                  horizontal: 20.0,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0.h,
+                  horizontal: 10.0.w,
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),

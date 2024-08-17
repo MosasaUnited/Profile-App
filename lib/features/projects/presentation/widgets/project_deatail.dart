@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/features/projects/presentation/widgets/project_link.dart';
 
 import '../../data/models/project_model.dart';
@@ -26,11 +27,11 @@ class ProjectDetail extends StatelessWidget {
           ),
         ),
         Responsive.isMobile(context)
-            ? const SizedBox(
-                height: 20.0 / 2,
+            ? SizedBox(
+                height: 20.h / 2,
               )
-            : const SizedBox(
-                height: 20.0,
+            : SizedBox(
+                height: 20.h,
               ),
         Text(
           projectList[index].description,
@@ -50,8 +51,8 @@ class ProjectDetail extends StatelessWidget {
         ProjectLinks(
           index: index,
         ),
-        const SizedBox(
-          height: 20.0 / 2,
+        SizedBox(
+          height: 20.0.h / 2,
         ),
       ],
     );

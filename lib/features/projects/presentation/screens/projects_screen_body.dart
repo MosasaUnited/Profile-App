@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/widgets/title_text.dart';
+import '../../data/view/responsive.dart';
 import '../widgets/projects_grid.dart';
 
 class ProjectsScreenBody extends StatelessWidget {
@@ -19,7 +20,26 @@ class ProjectsScreenBody extends StatelessWidget {
         SizedBox(
           height: 50.h,
         ),
-        const ProjectGrid(),
+        const Responsive(
+          desktop: ProjectGrid(
+            crossAxisCount: 3,
+          ),
+          extraLargeScreen: ProjectGrid(
+            crossAxisCount: 4,
+          ),
+          largeMobile: ProjectGrid(
+            crossAxisCount: 1,
+            ratio: 1.8,
+          ),
+          mobile: ProjectGrid(
+            crossAxisCount: 1,
+            ratio: 1.5,
+          ),
+          tablet: ProjectGrid(
+            crossAxisCount: 2,
+            ratio: 1.4,
+          ),
+        ),
       ],
     );
   }
