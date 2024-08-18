@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/core/widgets/custom_divider.dart';
-import 'package:profile_app/features/about/presentation/widgets/about_me_widget.dart';
-import 'package:profile_app/features/about/presentation/widgets/experience_widget.dart';
 
-class AboutScreenBody extends StatelessWidget {
-  const AboutScreenBody({super.key});
+import '../widgets/about_me_widget.dart';
+import '../widgets/experience_widget.dart';
+
+class OverViewScreenBody extends StatelessWidget {
+  const OverViewScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {

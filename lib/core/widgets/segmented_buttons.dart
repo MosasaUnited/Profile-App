@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:segmented_button_slide/segmented_button_slide.dart';
-
-import '../../features/about/presentation/about_screen.dart';
 import '../../features/home/presentation/home_profile.dart';
+import '../../features/overview/presentation/overview_screen.dart';
 import '../../features/projects/presentation/projects_screen.dart';
 
 class SegmentedButtons extends StatefulWidget {
@@ -32,7 +31,7 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
           onChange: (selected) => setState(
             () => selectedOption = selected,
           ),
-          curve: Curves.bounceInOut,
+          curve: Curves.easeInOut,
           entries: const [
             SegmentedButtonSlideEntry(
               icon: Icons.home,
@@ -82,7 +81,7 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
               const HomeProfile()
             else if (selectedOption == 1)
               // const Text('About Screen')
-              const AboutScreen()
+              const OverViewScreen()
             else
               // const Text('Project Screen'),
               const ProjectsScreen()
