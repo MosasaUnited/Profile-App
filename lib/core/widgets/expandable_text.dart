@@ -11,19 +11,29 @@ class ExpandableText extends StatefulWidget {
   State<ExpandableText> createState() => _ExpandableTextState();
 }
 
-class _ExpandableTextState extends State<ExpandableText> {
+class _ExpandableTextState extends State<ExpandableText>
+    with SingleTickerProviderStateMixin {
   bool isExpanded = false;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(
-          isExpanded ? widget.text : widget.text.substring(0, 100),
-          style: GoogleFonts.acme().copyWith(
-            fontSize: 14.sp,
+        AnimatedSize(
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeInOut,
+          child: AnimatedOpacity(
+            duration: const Duration(milliseconds: 300),
+            opacity: isExpanded ? 1.0 : 0.8,
+            child: Text(
+              isExpanded ? widget.text : widget.text.substring(0, 100),
+              style: GoogleFonts.acme().copyWith(
+                fontSize: 14.sp,
+              ),
+              maxLines: isExpanded ? null : 3,
+            ),
           ),
-          maxLines: isExpanded ? null : 3,
         ),
         TextButton(
           onPressed: () {
@@ -41,7 +51,7 @@ class _ExpandableTextState extends State<ExpandableText> {
               color: Colors.amberAccent,
             ),
           ),
-        )
+        ),
       ],
     );
   }

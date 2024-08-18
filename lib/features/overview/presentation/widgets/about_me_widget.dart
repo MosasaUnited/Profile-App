@@ -19,7 +19,9 @@ class AboutMeWidget extends StatelessWidget {
             Text(
               'About',
               style: Styles.textStyle20.copyWith(
-                  fontWeight: FontWeight.w900, color: MyColors.myYellow),
+                  fontWeight: FontWeight.w900,
+                  color: MyColors.myYellow,
+                  fontSize: 18.sp),
             ),
           ],
         ),

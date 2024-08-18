@@ -21,6 +21,7 @@ class ExperienceWidget extends StatelessWidget {
               style: Styles.textStyle20.copyWith(
                 fontWeight: FontWeight.w900,
                 color: MyColors.myYellow,
+                fontSize: 18.sp,
               ),
             ),
           ],
