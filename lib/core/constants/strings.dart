@@ -7,4 +7,5 @@ class AppStrings {
       'https://linkedin.com/in/mostafa-saad-247b5914b';
   static const String resumeDownload =
       'https://drive.google.com/file/d/1oN0FlicM0mHfmICzhvUyOUj-qttmY6mP/view';
+  static const String allRepositories = 'https://github.com/MosasaUnited?tab=repositories';   
 }
