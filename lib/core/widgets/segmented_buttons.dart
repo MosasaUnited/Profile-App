@@ -61,13 +61,16 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
           height: 50.h,
           padding: const EdgeInsets.all(16),
           borderRadius: BorderRadius.circular(8),
-          selectedTextStyle: const TextStyle(
+          selectedTextStyle:  TextStyle(
             fontWeight: FontWeight.w900,
             color: Colors.amber,
+            fontStyle: FontStyle.italic,
+            fontSize: 7.sp,
           ),
-          unselectedTextStyle: const TextStyle(
+          unselectedTextStyle:  TextStyle(
             fontWeight: FontWeight.w500,
             color: Colors.white,
+            fontSize: 5.sp,
           ),
           hoverTextStyle: const TextStyle(
             color: Colors.orange,
@@ -77,13 +80,10 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
         Column(
           children: [
             if (selectedOption == 0)
-              // const Text('Home Profile')
               const HomeProfile()
             else if (selectedOption == 1)
-              // const Text('About Screen')
               const OverViewScreen()
             else
-              // const Text('Project Screen'),
               const ProjectsScreen()
           ],
         ),
