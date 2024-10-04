@@ -15,6 +15,8 @@ class AppImages {
   );
   static SvgPicture githubIcon = SvgPicture.asset(
     'assets/svg/github.svg',
+    width: 35,
+    fit: BoxFit.cover,
   );
   static AssetImage aboutImage = const AssetImage('assets/images/about_image.jpg',
   );
