@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/core/theme/styles.dart';
@@ -40,10 +41,10 @@ class AboutMeWidget extends StatelessWidget {
             ),
             SizedBox(
               width: 20.w,
-            ),
+            ), 
             CircleAvatar(
-              radius: 150.r,
-              backgroundImage: AppImages.profileImage,
+              radius: 100.r,
+              backgroundImage: AppImages.aboutImage,
             ),
           ],
         ),

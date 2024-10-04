@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -43,8 +44,8 @@ class ExperienceWidget extends StatelessWidget {
               width: 20.w,
             ),
             CircleAvatar(
-              radius: 150.r,
-              backgroundImage: AppImages.profileImage,
+              radius: 100.r,
+              backgroundImage: AppImages.exprienceImage,
             ),
           ],
         ),

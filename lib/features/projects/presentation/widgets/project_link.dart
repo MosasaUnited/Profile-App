@@ -10,13 +10,16 @@ class ProjectLinks extends StatelessWidget {
   const ProjectLinks({super.key, required this.index});
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Check on Github',
-                style: TextStyle(color: Colors.white),
-                overflow: TextOverflow.ellipsis),
+            Text('Check on Github',
+                style: TextStyle(color: Colors.white, fontSize: 8.sp),
+                overflow: TextOverflow.ellipsis,
+            
+                ),
             IconButton(
               onPressed: () {
                 launchUrl(Uri.parse(projectList[index].link));
@@ -25,19 +28,30 @@ class ProjectLinks extends StatelessWidget {
             )
           ],
         ),
-        const Spacer(),
         TextButton(
           onPressed: () {
             launchUrl(Uri.parse(projectList[index].link));
           },
-          child: Text(
-            'Read More>>',
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(
+          child: RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                text: 'From',
+                style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 8.sp,
+            ),  
+              ),
+              TextSpan(text: ' Here ..',
+              style: TextStyle(
               color: Colors.amber,
               fontWeight: FontWeight.bold,
-              fontSize: 3.sp,
+              fontSize: 8.sp,
             ),
+            ),
+              ],
+          ),
           ),
         )
       ],

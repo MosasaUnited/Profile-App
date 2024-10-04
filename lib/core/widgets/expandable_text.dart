@@ -29,9 +29,9 @@ class _ExpandableTextState extends State<ExpandableText>
             child: Text(
               isExpanded ? widget.text : widget.text.substring(0, 100),
               style: GoogleFonts.acme().copyWith(
-                fontSize: 14.sp,
+                fontSize: 13.sp,
               ),
-              maxLines: isExpanded ? null : 3,
+              maxLines: isExpanded ? null : 4,
             ),
           ),
         ),
@@ -45,7 +45,7 @@ class _ExpandableTextState extends State<ExpandableText>
             textAlign: TextAlign.end,
             isExpanded ? '... Show less' : '... Show more',
             style: TextStyle(
-              fontSize: 5.sp,
+              fontSize: 6.sp,
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.w900,
               color: Colors.amberAccent,

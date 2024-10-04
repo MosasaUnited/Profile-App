@@ -9,10 +9,10 @@ class JobDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Animate(
       child: const TitleText(prefix: 'Flutter', title: 'Developer')
-          .animate(delay: 200.ms, onPlay: (controller) => controller.repeat)
+          .animate(delay: 100.ms, onPlay: (controller) => controller.repeat)
           .scale(
-            curve: Curves.ease,
-            delay: 5000.ms,
+            curve: Curves.bounceInOut,
+            delay: 2000.ms,
             duration: const Duration(milliseconds: 5000),
           ),
     );

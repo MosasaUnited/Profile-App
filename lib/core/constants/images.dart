@@ -16,4 +16,8 @@ class AppImages {
   static SvgPicture githubIcon = SvgPicture.asset(
     'assets/svg/github.svg',
   );
+  static AssetImage aboutImage = const AssetImage('assets/images/about_image.jpg',
+  );
+  static AssetImage exprienceImage = const AssetImage('assets/images/exprience_image.jpg',
+  );
 }

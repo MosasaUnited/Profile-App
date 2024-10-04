@@ -17,7 +17,7 @@ class DownloadResumeButton extends StatelessWidget {
         icon: Icon(
           Icons.download,
           color: Colors.white,
-          size: 7.w,
+          size: 10.w,
         ),
         onPressed: () => launchUrl(url),
         style: ButtonStyle(

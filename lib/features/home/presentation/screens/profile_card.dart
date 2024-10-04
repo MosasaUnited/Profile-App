@@ -33,8 +33,6 @@ class ProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-
     return Container(
       margin: EdgeInsets.only(
         bottom: 80.h,
@@ -44,7 +42,7 @@ class ProfileCard extends StatelessWidget {
         children: [
           for (final link in _profileLinks)
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: EdgeInsets.symmetric(horizontal: 10.h, vertical: 10.w),
               child: ProfileIconButton(link: link),
             ),
         ],

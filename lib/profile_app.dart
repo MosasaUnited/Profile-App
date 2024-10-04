@@ -17,7 +17,7 @@ class ProfileApp extends StatelessWidget {
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
         title: 'Profile App',
-        themeMode: ThemeMode.system,
+        themeMode: ThemeMode.dark,
         debugShowCheckedModeBanner: false,
         theme: ThemeDataStyle.light,
         darkTheme: ThemeDataStyle.dark,
