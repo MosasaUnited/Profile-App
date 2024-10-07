@@ -25,10 +25,10 @@ class AboutMeWidget extends StatelessWidget {
             ),
           ],
         ),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Expanded(
+            Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -38,13 +38,13 @@ class AboutMeWidget extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            /*SizedBox(
               width: 20.w,
             ), 
             CircleAvatar(
               radius: 100.r,
               backgroundImage: AppImages.aboutImage,
-            ),
+            ),*/
           ],
         ),
       ],

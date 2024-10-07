@@ -10,37 +10,39 @@ class ProjectsScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const TitleText(
-          prefix: 'Latest',
-          title: 'Projects',
-        ),
-        SizedBox(
-          height: 50.h,
-        ),
-        const Responsive(
-          desktop: ProjectGrid(
-            crossAxisCount: 3,
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const TitleText(
+            prefix: 'Latest',
+            title: 'Projects',
           ),
-          extraLargeScreen: ProjectGrid(
-            crossAxisCount: 4,
+          SizedBox(
+            height: 50.h,
           ),
-          largeMobile: ProjectGrid(
-            crossAxisCount: 1,
-            ratio: 1.8,
+          const Responsive(
+            desktop: ProjectGrid(
+              crossAxisCount: 3,
+            ),
+            extraLargeScreen: ProjectGrid(
+              crossAxisCount: 4,
+            ),
+            largeMobile: ProjectGrid(
+              crossAxisCount: 1,
+              ratio: 1.8,
+            ),
+            mobile: ProjectGrid(
+              crossAxisCount: 1,
+              ratio: 1.5,
+            ),
+            tablet: ProjectGrid(
+              crossAxisCount: 2,
+              ratio: 1.4,
+            ),
           ),
-          mobile: ProjectGrid(
-            crossAxisCount: 1,
-            ratio: 1.5,
-          ),
-          tablet: ProjectGrid(
-            crossAxisCount: 2,
-            ratio: 1.4,
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

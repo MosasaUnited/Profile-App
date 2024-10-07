@@ -3,6 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/profile_app.dart';
 
 void main() async{
+
+  WidgetsFlutterBinding.ensureInitialized();
+
   // To Fix texts being hidden bug in release mode
   await ScreenUtil.ensureScreenSize();
   runApp(const ProfileApp());

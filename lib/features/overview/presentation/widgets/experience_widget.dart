@@ -1,8 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/constants/images.dart';
 import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/expandable_text.dart';
@@ -27,9 +25,9 @@ class ExperienceWidget extends StatelessWidget {
             ),
           ],
         ),
-        Row(
+        const Row(
           children: [
-            const Expanded(
+            Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -40,13 +38,13 @@ class ExperienceWidget extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            /*SizedBox(
               width: 20.w,
             ),
             CircleAvatar(
               radius: 100.r,
               backgroundImage: AppImages.exprienceImage,
-            ),
+            ),*/
           ],
         ),
       ],

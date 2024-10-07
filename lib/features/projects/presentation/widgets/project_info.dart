@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:profile_app/core/constants/strings.dart';
 import 'package:profile_app/core/theme/colors.dart';
+import 'package:profile_app/features/projects/data/models/project_model.dart';
 import 'package:profile_app/features/projects/presentation/widgets/project_deatail.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../data/models/project_model.dart';
 import '../../data/models/projects_controller.dart';
-import 'image_viewer.dart';
 
 class ProjectStack extends StatelessWidget {
   final controller = Get.put(ProjectController());
@@ -20,7 +18,8 @@ class ProjectStack extends StatelessWidget {
         controller.onHover(index, value);
       },
       onTap: () {
-        launchUrl(Uri.parse(AppStrings.allRepositories));
+        launchUrl(Uri.parse(projectList[index].link));
+        //launchUrl(Uri.parse(AppStrings.allRepositories));
         //ImageViewer(context, projectList[index].image);
       },
       borderRadius: BorderRadius.circular(30),
