@@ -19,11 +19,12 @@ class ProjectGrid extends StatelessWidget {
       create: (context) => ProjectsCubit(projectList.length),
       child: GridView.builder(
         shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
         padding: const EdgeInsets.symmetric(horizontal: 30),
         itemCount: projectList.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount,
-          childAspectRatio: ratio,
+          childAspectRatio: ratio,  
         ),
         itemBuilder: (context, index) {
           return BlocBuilder<ProjectsCubit, ProjectsState>(

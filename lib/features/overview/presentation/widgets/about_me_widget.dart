@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/core/theme/styles.dart';
 
-import '../../../../core/constants/images.dart';
 import '../../../../core/theme/colors.dart';
 import '../../../../core/widgets/expandable_text.dart';
 

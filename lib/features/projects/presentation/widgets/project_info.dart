@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:profile_app/core/theme/colors.dart';
 import 'package:profile_app/features/projects/data/models/project_model.dart';
-import 'package:profile_app/features/projects/presentation/widgets/project_deatail.dart';
+import 'package:profile_app/features/projects/presentation/widgets/project_detail.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../data/models/projects_controller.dart';
