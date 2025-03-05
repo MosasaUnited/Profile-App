@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:segmented_button_slide/segmented_button_slide.dart';
-import '../../features/home/presentation/home_profile.dart';
-import '../../features/overview/presentation/overview_screen.dart';
-import '../../features/projects/presentation/projects_screen.dart';
+import '../../../home/presentation/home_profile.dart';
+import '../../../overview/presentation/overview_screen.dart';
+import '../../../projects/presentation/projects_screen.dart';
 
 class SegmentedButtons extends StatefulWidget {
   const SegmentedButtons({Key? key}) : super(key: key);
@@ -35,39 +35,32 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
           entries: const [
             SegmentedButtonSlideEntry(
               icon: Icons.home,
-              label: 'Home',
+              label: 'Over View',
             ),
             SegmentedButtonSlideEntry(
               icon: Icons.record_voice_over,
-              label: "OverView",
+              label: 'Reviews',
             ),
             SegmentedButtonSlideEntry(
               icon: Icons.workspace_premium,
-              label: "Projects",
+              label: 'Projects',
             ),
           ],
           colors: const SegmentedButtonSlideColors(
             barColor: Colors.transparent,
             backgroundSelectedColor: Colors.transparent,
           ),
-          slideShadow: [
-            BoxShadow(
-              color: Colors.purpleAccent.withOpacity(1),
-              blurRadius: 2,
-              spreadRadius: 1,
-            ),
-          ],
           margin: const EdgeInsets.all(16),
           height: 50.h,
           padding: const EdgeInsets.all(16),
           borderRadius: BorderRadius.circular(8),
-          selectedTextStyle:  TextStyle(
+          selectedTextStyle: TextStyle(
             fontWeight: FontWeight.w900,
-            color: Colors.amber,
+            color: Colors.white,
             fontStyle: FontStyle.italic,
             fontSize: 7.sp,
           ),
-          unselectedTextStyle:  TextStyle(
+          unselectedTextStyle: TextStyle(
             fontWeight: FontWeight.w500,
             color: Colors.white,
             fontSize: 5.sp,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/theme/theme_data_style.dart';
-import 'core/utils/app_router.dart';
+import 'core/router/app_router.dart';
 
 class ProfileApp extends StatelessWidget {
   const ProfileApp({super.key});

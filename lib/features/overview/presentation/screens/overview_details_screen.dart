@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/core/widgets/custom_divider.dart';
-import 'package:profile_app/features/overview/presentation/widgets/about_me_widget.dart';
-import 'package:profile_app/features/overview/presentation/widgets/experience_widget.dart';
+import 'package:profile_app/features/home/presentation/widgets/about_me_widget.dart';
+import 'package:profile_app/features/home/presentation/widgets/experience_widget.dart';
 
 class OverviewDetailsScreen extends StatelessWidget {
   const OverviewDetailsScreen({super.key});

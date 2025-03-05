@@ -23,8 +23,8 @@ class ProjectGrid extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 30),
         itemCount: projectList.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount:crossAxisCount,
-          childAspectRatio:ratio,  
+          crossAxisCount: crossAxisCount,
+          childAspectRatio: ratio,
         ),
         itemBuilder: (context, index) {
           return BlocBuilder<ProjectsCubit, ProjectsState>(

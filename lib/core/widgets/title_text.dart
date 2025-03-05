@@ -16,7 +16,7 @@ class TitleText extends StatelessWidget {
         Text(
           prefix,
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                color: Colors.white,
+                color: Colors.lightBlueAccent,
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w900,
               ),
@@ -44,8 +44,7 @@ class TitleText extends StatelessWidget {
                       ),
                 ),
               )
-            : 
-             ShaderMask(
+            : ShaderMask(
                 shaderCallback: (bounds) {
                   return const LinearGradient(
                       end: Alignment.centerRight,
