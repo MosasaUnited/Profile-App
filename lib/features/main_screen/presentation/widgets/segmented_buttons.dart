@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:segmented_button_slide/segmented_button_slide.dart';
-import '../../../home/presentation/home_profile.dart';
-import '../../../overview/presentation/overview_screen.dart';
+import '../../../overview/presentation/home_profile.dart';
+import '../../../reviews/presentation/reviews_screen.dart';
 import '../../../projects/presentation/projects_screen.dart';
 
 class SegmentedButtons extends StatefulWidget {
@@ -39,11 +39,11 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
             ),
             SegmentedButtonSlideEntry(
               icon: Icons.record_voice_over,
-              label: 'Reviews',
+              label: 'Latest Projects',
             ),
             SegmentedButtonSlideEntry(
               icon: Icons.workspace_premium,
-              label: 'Projects',
+              label: 'Other Projects',
             ),
           ],
           colors: const SegmentedButtonSlideColors(
@@ -75,7 +75,7 @@ class _SegmentedButtonsState extends State<SegmentedButtons> {
             if (selectedOption == 0)
               const HomeProfile()
             else if (selectedOption == 1)
-              const OverViewScreen()
+              const ReviewsScreen()
             else
               const ProjectsScreen()
           ],

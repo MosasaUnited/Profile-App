@@ -1,0 +1,2 @@
+C:/Users/mosta/StudioProjects/profile_app/android/app/.cxx/Debug/5c426s6i/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/mosta/StudioProjects/profile_app/android/app/.cxx/Debug/5c426s6i/armeabi-v7a/CMakeFiles/rebuild_cache.dir

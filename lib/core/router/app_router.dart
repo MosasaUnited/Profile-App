@@ -1,9 +1,9 @@
 import 'package:go_router/go_router.dart';
 import 'package:profile_app/features/main_screen/main_screen_view.dart';
-import 'package:profile_app/features/home/presentation/home_profile.dart';
-import 'package:profile_app/features/overview/presentation/overview_screen.dart';
+import 'package:profile_app/features/overview/presentation/home_profile.dart';
+import 'package:profile_app/features/reviews/presentation/reviews_screen.dart';
 
-import '../../features/home/presentation/widgets/resume.dart';
+import '../../features/overview/presentation/widgets/resume.dart';
 import '../../features/projects/presentation/projects_screen.dart';
 
 abstract class AppRouter {
@@ -29,7 +29,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kOverViewScreen,
-        builder: (context, state) => const OverViewScreen(),
+        builder: (context, state) => const ReviewsScreen(),
       ),
       GoRoute(
         path: kProjectScreen,

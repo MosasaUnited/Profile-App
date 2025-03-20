@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
 class AppImages {
-    static AssetImage profileImage = const AssetImage(
+  static AssetImage profileImage = const AssetImage(
     'assets/images/profile_image.jpg',
   );
   static SvgPicture githubIcon = SvgPicture.asset(
@@ -11,8 +10,7 @@ class AppImages {
     width: 35,
     fit: BoxFit.cover,
   );
-  static AssetImage aboutImage = const AssetImage('assets/images/about_image.jpg',
-  );
-  static AssetImage exprienceImage = const AssetImage('assets/images/exprience_image.jpg',
-  );
+  static const String cdwsMockups = 'assets/images/cdws_mockups.png';
+
+  static const String playstoreImage = 'assets/images/playstore_image.png';
 }

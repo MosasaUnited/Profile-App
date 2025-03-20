@@ -1,0 +1,2 @@
+C:/Users/mosta/StudioProjects/profile_app/android/app/.cxx/Debug/5o591320/x86/CMakeFiles/edit_cache.dir
+C:/Users/mosta/StudioProjects/profile_app/android/app/.cxx/Debug/5o591320/x86/CMakeFiles/rebuild_cache.dir
