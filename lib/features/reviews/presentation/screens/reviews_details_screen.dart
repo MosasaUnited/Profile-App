@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:profile_app/core/widgets/custom_divider.dart';
 import 'package:profile_app/features/reviews/presentation/widgets/header_widget.dart';
+import 'package:profile_app/features/reviews/presentation/widgets/screenshots_slider.dart';
 import 'package:profile_app/features/reviews/presentation/widgets/youtube_reviews_widget.dart';
 
 class ReviewsDetailsScreen extends StatelessWidget {
@@ -26,11 +28,11 @@ class ReviewsDetailsScreen extends StatelessWidget {
               SizedBox(
                 height: 60.h,
               ),
-              // const CustomDivider(),
-              // SizedBox(
-              //   height: 60.h,
-              // ),
-              // const ArticlesWidget(),
+              const CustomDivider(),
+              SizedBox(
+                height: 60.h,
+              ),
+              const ScreenshotsSlider(),
               // SizedBox(
               //   height: 60.h,
               // ),
