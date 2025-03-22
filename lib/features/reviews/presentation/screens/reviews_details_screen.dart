@@ -33,25 +33,9 @@ class ReviewsDetailsScreen extends StatelessWidget {
                 height: 60.h,
               ),
               const ScreenshotsSlider(),
-              // SizedBox(
-              //   height: 60.h,
-              // ),
-              // const CustomDivider(),
-              // SizedBox(
-              //   height: 60.h,
-              // ),
-              // const FacebookPostsWidget(),
-              // SizedBox(
-              //   height: 60.h,
-              // ),
-              // const CustomDivider(),
-              // SizedBox(
-              //   height: 60.h,
-              // ),
-              // const AppScreenshotsWidget(),
-              // SizedBox(
-              //   height: 60.h,
-              // ),
+              SizedBox(
+                height: 60.h,
+              ),
             ],
           ),
         ),

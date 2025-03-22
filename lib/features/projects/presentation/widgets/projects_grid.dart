@@ -16,7 +16,7 @@ class ProjectGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<ProjectsCubit>(
-      create: (context) => ProjectsCubit(projectList.length),
+      create: (context) => ProjectsCubit(),
       child: GridView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
@@ -56,9 +56,9 @@ class ProjectGrid extends StatelessWidget {
                 ),
                 child: MouseRegion(
                   onEnter: (_) =>
-                      context.read<ProjectsCubit>().setHover(index, true),
+                      context.read<ProjectsCubit>().onHover(index, true),
                   onExit: (_) =>
-                      context.read<ProjectsCubit>().setHover(index, false),
+                      context.read<ProjectsCubit>().onHover(index, false),
                   child: ProjectStack(index: index),
                 ),
               );

@@ -48,8 +48,6 @@ class _ScreenshotsSliderState extends State<ScreenshotsSlider> {
                   child: CachedNetworkImage(
                     imageUrl: item,
                     fit: BoxFit.cover,
-                    
-                    
                   ),
                 ),
               )
