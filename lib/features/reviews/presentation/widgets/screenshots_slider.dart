@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -45,8 +44,8 @@ class _ScreenshotsSliderState extends State<ScreenshotsSlider> {
           items: imgList
               .map(
                 (item) => Center(
-                  child: CachedNetworkImage(
-                    imageUrl: item,
+                  child: Image.asset(
+                    item,
                     fit: BoxFit.cover,
                   ),
                 ),

@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/core/constants/images.dart';
@@ -28,15 +27,15 @@ class HeaderWidget extends StatelessWidget {
           SizedBox(
             height: 15.h,
           ),
-          CachedNetworkImage(
-            imageUrl: AppImages.cdwsMockups,
+          Image.asset(
+            AppImages.cdwsMockups,
           ),
           SizedBox(
             height: 10.h,
           ),
           IconButton(
-            icon: CachedNetworkImage(
-              imageUrl: AppImages.playstoreImage,
+            icon: Image.asset(
+              AppImages.playstoreImage,
               height: 250.h,
             ),
             onPressed: _launchPlayStore,
