@@ -2,14 +2,11 @@ import 'package:go_router/go_router.dart';
 import 'package:profile_app/features/main_screen/main_screen_view.dart';
 import 'package:profile_app/features/overview/presentation/home_profile.dart';
 import 'package:profile_app/features/reviews/presentation/reviews_screen.dart';
-
-import '../../features/overview/presentation/widgets/resume.dart';
 import '../../features/projects/presentation/projects_screen.dart';
 
 abstract class AppRouter {
   static const kMainViewBody = '/';
   static const kHomeScreen = '/Home';
-  static const kResume = '/resume';
   static const kOverViewScreen = '/overView';
   static const kProjectScreen = '/projects';
 
@@ -22,10 +19,6 @@ abstract class AppRouter {
       GoRoute(
         path: kHomeScreen,
         builder: (context, state) => const HomeProfile(),
-      ),
-      GoRoute(
-        path: kResume,
-        builder: (context, state) => const Resume(),
       ),
       GoRoute(
         path: kOverViewScreen,

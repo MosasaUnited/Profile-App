@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:go_router/go_router.dart';
 
-import '../../../../core/router/app_router.dart';
+import 'package:profile_app/core/constants/strings.dart';
+
+import 'package:url_launcher/url_launcher.dart';
+
 import 'custom_button_animation.dart';
 
 class ResumeButton extends StatelessWidget {
@@ -11,6 +13,7 @@ class ResumeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+    final Uri url = Uri.parse(AppStrings.resumeView);
 
     return Container(
       margin: EdgeInsets.only(
@@ -18,13 +21,13 @@ class ResumeButton extends StatelessWidget {
       ), // Adapt for larger screens
       child: Hero(
         transitionOnUserGestures: true,
-        tag: 'resumeButton', // Unique tag for animation
+        tag: 'resumeButton',
         child: CustomButtonAnimation(
           key: UniqueKey(),
           color: Colors.amber,
           onPressed: () {
             Future.delayed(const Duration(milliseconds: 400), () {
-              GoRouter.of(context).push(AppRouter.kResume);
+              launchUrl(url);
             });
           },
           child: Animate(
